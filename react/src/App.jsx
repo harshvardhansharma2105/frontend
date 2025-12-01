@@ -1,11 +1,13 @@
 import './App.css'
-import States from './Components/State.jsx'
+import States from './Components/State.jsx';
+import Form from './Components/Form.jsx';
 
 function App() {
 
   return (
     <>
-      <States></States>
+      {/* <States></States> */}
+      <Form></Form>
     </>
   )
 }
