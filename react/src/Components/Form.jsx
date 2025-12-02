@@ -8,9 +8,9 @@ const Form = () => {
     const handelChange = async(e)=>{ 
        e.preventDefault();
         const response = await fetch("http://localhost:4000/save-form", {
-            headers: {"content-type" : "application/json"}, //we have to write header because when we send request to header then to tell the content type.
-            method : "POST",
-            body : JSON.stringify({email, name, password}), //body is actual data what we rae sending to the server, And Http cannot send direct objects to the server so thats why we need to stringify first before sending.
+          method : "POST",
+          headers: {"content-type" : "application/json"}, //we have to write header because when we send request to header then to tell the content type.
+          body : JSON.stringify({email, name, password}), //body is actual data what we rae sending to the server, And Http cannot send direct objects to the server so thats why we need to stringify first before sending.
         })
             const data = await response.json();
     console.log(data);
@@ -19,7 +19,7 @@ const Form = () => {
     
   return (
     <div>
-        <form className='form' onSubmit = {handelChange}>
+        <form className='form' action="/save-form" method='POST' onSubmit = {handelChange}>
             <label>Name</label>
             <input type="text" placeholder='Enter your Email' value={name} onChange = {(e)=>{setName(e.target.value)}}></input>
             <label>Email</label>
