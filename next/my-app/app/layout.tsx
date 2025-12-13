@@ -1,7 +1,5 @@
 import "./globals.css";
 import Providers from "../app/providers";
-import Count from "./components/Count";
-import Cart from './components/Cart'
 
 export const metadata = {
   title: "My Shop",
@@ -18,8 +16,7 @@ export default function RootLayout({
       <body>
         <Providers>
           {children}
-          <Count />
-          <Cart />
+
         </Providers>
       </body>
     </html>
