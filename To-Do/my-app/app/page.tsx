@@ -1,11 +1,9 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="">
-      <main className="">
-
-      </main>
-    </div>
+    <Link href="/login" className="">
+      <button type="button">Get Started</button>
+    </Link>
   );
 }
